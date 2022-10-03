@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Blogs | Vikas</title>
+</head>
+
+<body>
+    <nav class="navigation container">
+        <div class="nav-brand"><a href="/">Vikas</a></div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link" href="/">Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="./projects.html">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link link-active" href="./blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-heading">
+            Building a Search Bar
+            <span class="heading-inverted">in JavaScript</span>
+        </h1>
+    </header>
+    <article class="article">
+        <h2>Introduction</h2>
+        <p>
+            In this article, you will learn how to build a Search Bar using HTML, CSS and JavaScript (JS) and also get a
+            basic understanding of how DOM and fetch() work. Note, that this is not a beginner's tutorial on building a
+            website. So you need to have a basic understanding of HTML, CSS and JS. By the end of this tutorial the
+            website should look like this:
+        </p>
+        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660721524966/HMrygiO-t.gif?auto=format,compress&gif-q=60&format=webm"
+            alt="example gif" class="article-img">
+        <h2>The Codes</h2>
+        <p>
+            For the sake of those that want to write the code without understanding it at first (of which I am one), the
+            code will be shown first. You can copy the codes into your project folder to see it run in your browser,
+            then you read the rest of the article to understand what you just copied. But if you really want to learn it
+            well, a more prefered way will be to read the article while writing the functions one by one.
+        </p>
+        <p>
+            <li>Inside this folder create a file index.html</li>
+        </p>
+        <img src="/images/2.jpg" alt="code" class="article-img">
+        <p>
+            <li>Then create another file style.css;</li>
+        </p>
+
+        <img src="./images/3.jpeg" class="article-img"  class="article-img">
+       
+        <p>
+            <li>And finally the script.js;</li>
+        </p>
+        <img src="./images/4.jpeg" class="article-img"  class="article-img">
+        <h2>How it works</h2>
+        <p>
+            First of all the data in real life, we will be getting the data from API. To mimic the IRL situation we will be using https://jsonplaceholder.typicode.com/users Which returns an array of 10 objects.
+<br>
+Let's fetch the data from API for this we will be using the fetch() method
+        </p>
+        <img src="./images/5.jpeg"  class="article-img" >
+        <p>
+            After fetching the response convert it to JSON using the JSON() method. then we will map the data array with the display function and store data for later use.
+        </p>
+        <p>
+            Now, the Display function takes the object as an argument and loads Dom with necessary information. To display we create Div with the “.card” class for that we will use createElement(). To add class we used the classList method. To add Content we have a couple of options but due to simplicity we will be using template literals and innerHTML
+        </p>
+        <img src="./images/6.jpeg"  class="article-img" >
+        <p>
+            Now the last part We will add EventListener to the Input and Listen to the input event. For every event, we will traverse through using the forEach method and if the input value is present we will add a “.hide” class to that element.
+        </p>
+        <img src="./images/7.jpeg"  class="article-img" >
+        <h2>Conclusions</h2>
+        <p>
+            Building a simple Search bar in JavaScript is an excellent, simple and fun project for beginners to start with because it helps you understand an initially complex logic used in the simplest of ways. In the next article, we will be talking about debounce and throttle methods and implementing these functions.
+        </p>
+        <h4>Thanks for reading</h4>
+
+        </p>
+    </article>
+    <footer class="footer">
+        <div class="footer-header">Connect with me</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/wigzen/"> Github </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/VikasLodh"> Twitter </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/vikas-lodh/">
+                    Linkedin
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://wigzen.hashnode.dev//">
+                    Hashnode
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

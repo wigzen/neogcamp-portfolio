@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Blogs | Vikas</title>
+  </head>
+
+  <body>
+    <nav class="navigation container">
+      <div class="nav-brand"><a href="/">Vikas</a></div>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link" href="/">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="./projects.html">Projects</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="./blogs.html">Blogs</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <h1 class="hero-heading">
+        JavaScript in<span class="heading-inverted">Debounce</span>
+      </h1>
+    </header>
+    <article class="article">
+      <p>
+        In the last Article, we build a Search feature. In this article, we are going to optimize that feature with Debounce
+      </p>
+    <q>
+      (if haven't read last article then click here )
+    </q>
+    <img src="https://c.tenor.com/LqG262WEznAAAAAd/that-is-progress-dan-levy.gif" class="article-img" alt="gif">
+    <h2>But What is debounce?</h2>
+    <p>
+      Debouncing is a programming pattern or technique to frequently restrict the calling of a time-consuming function, by delaying the execution of the function until a specified time to avoid unnecessary API calls, multiply calls and improve performance.
+    </p>
+      <p>
+        Debounce function is a higher-order function which means the function returns another function.
+      </p>
+      <p>
+        The common use of this function is a search box,text-field autosave, and to eliminate multiple inputs
+
+        Now let's code
+      </p>
+      <img src="./images/1.jpg" class="article-img"alt="code">
+      <p>
+        When the user types the first letter and releases the key, the debounce() first resets the timer with clearTimeout(). well, initially timer is undefined. So nothing resets. then it schedules the function to be invoked in 300ms.
+
+If the user keeps typing, so with each key release triggers the debounce () again. that means cancelling the previous timer and rescheduling it for a new time 300 ms in the future. This goes on as long as the user keeps typing under 300 ms.
+
+The last schedule won’t get cleared, so the func() will finally be called.
+
+the debounce() function can be used on input(expect radio), window events like scroll.
+
+<p>To see implementation in search bar check this <a href="https://codepen.io/wigzen/pen/JjLmyEL">Codepen</a> </p>
+
+<h4>Thanks for reading</h4>
+
+      </p>
+    </article>
+    <footer class="footer">
+      <div class="footer-header">Connect with me</div>
+      <ul class="social-links list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/wigzen/"> Github </a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://twitter.com/VikasLodh"> Twitter </a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://www.linkedin.com/in/vikas-lodh/">
+            Linkedin
+          </a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://wigzen.hashnode.dev//">
+            Hashnode
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

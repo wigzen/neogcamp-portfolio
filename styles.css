@@ -255,3 +255,13 @@ transform: scale(1.5);
     display: block;
   }
 }
+/* blog */
+
+.article{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.article-img{
+width: 100%;
+}
